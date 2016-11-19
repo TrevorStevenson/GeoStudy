@@ -32,11 +32,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print(error.localizedDescription)
+        
+        if error != nil {
             return
         }
-        // ...
+        
+        let authentication = user.authentication
+        let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
+                                                          accessToken: (authentication?.accessToken)!)
+        
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in }
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

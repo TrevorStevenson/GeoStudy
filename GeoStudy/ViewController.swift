@@ -15,12 +15,25 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.navigationController?.isNavigationBarHidden = true
+        
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if user != nil {
+                // User is signed in.
+                let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+                self.navigationController?.show(VC, sender: nil)
+            } 
+        }
+        
         GIDSignIn.sharedInstance().uiDelegate = self
         
         GIDSignIn.sharedInstance().signInSilently()
         
-        // TODO(developer) Configure the sign-in button look/feel
-        // ...
+        let signInButton = GIDSignInButton()
+        signInButton.frame.origin.x = self.view.frame.width/2 - signInButton.frame.width/2
+        signInButton.frame.origin.y = self.view.frame.height/2 - signInButton.frame.height/2
+        self.view.addSubview(signInButton)
+        
     }
 
     override func didReceiveMemoryWarning() {
