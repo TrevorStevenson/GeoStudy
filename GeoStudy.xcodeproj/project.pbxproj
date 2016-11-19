@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02855B17A052BDAD4B5541B3 /* Pods_GeoStudyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28825B4D4F7F20D961302108 /* Pods_GeoStudyUITests.framework */; };
 		3AD13F041DE0EE4E001E1404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */; };
 		3AD13F061DE0EE4E001E1404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F051DE0EE4E001E1404 /* ViewController.swift */; };
 		3AD13F091DE0EE4E001E1404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F071DE0EE4E001E1404 /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		3AD13F0E1DE0EE4E001E1404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F0C1DE0EE4E001E1404 /* LaunchScreen.storyboard */; };
 		3AD13F191DE0EE4E001E1404 /* GeoStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F181DE0EE4E001E1404 /* GeoStudyTests.swift */; };
 		3AD13F241DE0EE4E001E1404 /* GeoStudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F231DE0EE4E001E1404 /* GeoStudyUITests.swift */; };
+		F0DF41F1082BAA0F7B96A81B /* Pods_GeoStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A05A7F00F14EED2E7AF44F /* Pods_GeoStudy.framework */; };
+		FA8EC9FC9965FB0E337B5E28 /* Pods_GeoStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED5CBA5F618C70BFFFFFE408 /* Pods_GeoStudyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1445C2DA49675F47B1F65575 /* Pods-GeoStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyTests/Pods-GeoStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		28825B4D4F7F20D961302108 /* Pods_GeoStudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoStudyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B191CAC958FF896CBB2DE2 /* Pods-GeoStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyUITests/Pods-GeoStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3AD13F001DE0EE4E001E1404 /* GeoStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD13F051DE0EE4E001E1404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		3AD13F1F1DE0EE4E001E1404 /* GeoStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD13F231DE0EE4E001E1404 /* GeoStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoStudyUITests.swift; sourceTree = "<group>"; };
 		3AD13F251DE0EE4E001E1404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF2CF87839530D55A51996B /* Pods-GeoStudyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyUITests/Pods-GeoStudyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		70A05A7F00F14EED2E7AF44F /* Pods_GeoStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E673126A0B2F92C91EDDA280 /* Pods-GeoStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyTests/Pods-GeoStudyTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED5CBA5F618C70BFFFFFE408 /* Pods_GeoStudyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoStudyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEBC0F39FEFF35CBEB1EB702 /* Pods-GeoStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudy/Pods-GeoStudy.release.xcconfig"; sourceTree = "<group>"; };
+		FB290D29A0B5E7DC99374866 /* Pods-GeoStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudy/Pods-GeoStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0DF41F1082BAA0F7B96A81B /* Pods_GeoStudy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8EC9FC9965FB0E337B5E28 /* Pods_GeoStudyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02855B17A052BDAD4B5541B3 /* Pods_GeoStudyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				3AD13F171DE0EE4E001E1404 /* GeoStudyTests */,
 				3AD13F221DE0EE4E001E1404 /* GeoStudyUITests */,
 				3AD13F011DE0EE4E001E1404 /* Products */,
+				9A0AE2F10674221BB635964A /* Pods */,
+				85D4966EEE573E4F53E72704 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = GeoStudyUITests;
 			sourceTree = "<group>";
 		};
+		85D4966EEE573E4F53E72704 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70A05A7F00F14EED2E7AF44F /* Pods_GeoStudy.framework */,
+				ED5CBA5F618C70BFFFFFE408 /* Pods_GeoStudyTests.framework */,
+				28825B4D4F7F20D961302108 /* Pods_GeoStudyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A0AE2F10674221BB635964A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB290D29A0B5E7DC99374866 /* Pods-GeoStudy.debug.xcconfig */,
+				EEBC0F39FEFF35CBEB1EB702 /* Pods-GeoStudy.release.xcconfig */,
+				1445C2DA49675F47B1F65575 /* Pods-GeoStudyTests.debug.xcconfig */,
+				E673126A0B2F92C91EDDA280 /* Pods-GeoStudyTests.release.xcconfig */,
+				6BF2CF87839530D55A51996B /* Pods-GeoStudyUITests.debug.xcconfig */,
+				37B191CAC958FF896CBB2DE2 /* Pods-GeoStudyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AD13F281DE0EE4E001E1404 /* Build configuration list for PBXNativeTarget "GeoStudy" */;
 			buildPhases = (
+				E11ACDB93139308C926ACFC1 /* [CP] Check Pods Manifest.lock */,
 				3AD13EFC1DE0EE4E001E1404 /* Sources */,
 				3AD13EFD1DE0EE4E001E1404 /* Frameworks */,
 				3AD13EFE1DE0EE4E001E1404 /* Resources */,
+				AF6C5D0988D2DA910B8D2D1A /* [CP] Embed Pods Frameworks */,
+				9EBB4D5E245D63A949F6226B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AD13F2B1DE0EE4E001E1404 /* Build configuration list for PBXNativeTarget "GeoStudyTests" */;
 			buildPhases = (
+				787AF0EC4BB88306C870506C /* [CP] Check Pods Manifest.lock */,
 				3AD13F101DE0EE4E001E1404 /* Sources */,
 				3AD13F111DE0EE4E001E1404 /* Frameworks */,
 				3AD13F121DE0EE4E001E1404 /* Resources */,
+				2C8B31C9FAD25ED5D0AA7559 /* [CP] Embed Pods Frameworks */,
+				287CF82266CAC3BA8900C7DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AD13F2E1DE0EE4E001E1404 /* Build configuration list for PBXNativeTarget "GeoStudyUITests" */;
 			buildPhases = (
+				00CD921A60E5B18657AF917D /* [CP] Check Pods Manifest.lock */,
 				3AD13F1B1DE0EE4E001E1404 /* Sources */,
 				3AD13F1C1DE0EE4E001E1404 /* Frameworks */,
 				3AD13F1D1DE0EE4E001E1404 /* Resources */,
+				35D48CF7934D1AFE5B32DBEF /* [CP] Embed Pods Frameworks */,
+				EF6373C40B4D02AC9893702A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00CD921A60E5B18657AF917D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		287CF82266CAC3BA8900C7DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoStudyTests/Pods-GeoStudyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C8B31C9FAD25ED5D0AA7559 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoStudyTests/Pods-GeoStudyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35D48CF7934D1AFE5B32DBEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoStudyUITests/Pods-GeoStudyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		787AF0EC4BB88306C870506C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9EBB4D5E245D63A949F6226B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoStudy/Pods-GeoStudy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF6C5D0988D2DA910B8D2D1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoStudy/Pods-GeoStudy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E11ACDB93139308C926ACFC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF6373C40B4D02AC9893702A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoStudyUITests/Pods-GeoStudyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3AD13EFC1DE0EE4E001E1404 /* Sources */ = {
@@ -410,6 +597,7 @@
 		};
 		3AD13F291DE0EE4E001E1404 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB290D29A0B5E7DC99374866 /* Pods-GeoStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GeoStudy/Info.plist;
@@ -422,6 +610,7 @@
 		};
 		3AD13F2A1DE0EE4E001E1404 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEBC0F39FEFF35CBEB1EB702 /* Pods-GeoStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GeoStudy/Info.plist;
@@ -434,6 +623,7 @@
 		};
 		3AD13F2C1DE0EE4E001E1404 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1445C2DA49675F47B1F65575 /* Pods-GeoStudyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +638,7 @@
 		};
 		3AD13F2D1DE0EE4E001E1404 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E673126A0B2F92C91EDDA280 /* Pods-GeoStudyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +653,7 @@
 		};
 		3AD13F2F1DE0EE4E001E1404 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BF2CF87839530D55A51996B /* Pods-GeoStudyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = GeoStudyUITests/Info.plist;
@@ -475,6 +667,7 @@
 		};
 		3AD13F301DE0EE4E001E1404 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37B191CAC958FF896CBB2DE2 /* Pods-GeoStudyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = GeoStudyUITests/Info.plist;

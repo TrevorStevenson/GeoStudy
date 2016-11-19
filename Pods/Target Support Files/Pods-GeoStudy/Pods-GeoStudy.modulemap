@@ -1,0 +1,6 @@
+framework module Pods_GeoStudy {
+  umbrella header "Pods-GeoStudy-umbrella.h"
+
+  export *
+  module * { export * }
+}
