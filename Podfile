@@ -8,6 +8,7 @@ target 'GeoStudy' do
 
   # Pods for GeoStudy
 pod 'Firebase'
+pod 'FirebaseUI', '~> 1.0'
 
 
   target 'GeoStudyTests' do
