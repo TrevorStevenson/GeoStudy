@@ -23,6 +23,12 @@ class MainMenuViewController: UIViewController {
                 // User is signed in.
                 self.userIDLabel.text = user?.displayName
             }
+            else
+            {
+                let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login")
+                
+                self.navigationController?.present(VC, animated: true, completion: nil)
+            }
         }
     }
 

@@ -20,14 +20,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if user != nil {
                 // User is signed in.
-                let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
-                self.navigationController?.show(VC, sender: nil)
+                self.dismiss(animated: true, completion: nil)
             } 
         }
         
         GIDSignIn.sharedInstance().uiDelegate = self
         
-        GIDSignIn.sharedInstance().signInSilently()
+        //GIDSignIn.sharedInstance().signInSilently()
         
         let signInButton = GIDSignInButton()
         signInButton.frame.origin.x = self.view.frame.width/2 - signInButton.frame.width/2
