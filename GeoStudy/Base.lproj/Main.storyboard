@@ -268,10 +268,10 @@
             </objects>
             <point key="canvasLocation" x="742" y="93"/>
         </scene>
-        <!--View Controller-->
+        <!--Class View Controller-->
         <scene sceneID="frM-PG-5uG">
             <objects>
-                <viewController storyboardIdentifier="class" id="trQ-cO-73F" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="class" id="trQ-cO-73F" customClass="ClassViewController" customModule="GeoStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f6m-LN-h5n"/>
                         <viewControllerLayoutGuide type="bottom" id="eXH-h3-1bk"/>
@@ -284,26 +284,95 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-41-BwU">
-                                <rect key="frame" x="149" y="41.5" width="77.5" height="38.5"/>
+                                <rect key="frame" x="149" y="41" width="78" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fkJ-qd-25z">
+                                <rect key="frame" x="20" y="88" width="339" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell2" rowHeight="56" id="WI1-BX-2cW" customClass="StudyCell" customModule="GeoStudy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="339" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WI1-BX-2cW" id="Fzb-B8-LXj">
+                                            <rect key="frame" x="0.0" y="0.0" width="306" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtz-Kl-DMX">
+                                                    <rect key="frame" x="17" y="17" width="45" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Gtz-Kl-DMX" firstAttribute="leading" secondItem="Fzb-B8-LXj" secondAttribute="leadingMargin" constant="9" id="0mn-Hp-8yh"/>
+                                                <constraint firstItem="Gtz-Kl-DMX" firstAttribute="centerY" secondItem="Fzb-B8-LXj" secondAttribute="centerY" id="urp-NO-wc8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Gtz-Kl-DMX" id="owI-Qc-5xe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="trQ-cO-73F" id="aUk-Dq-O33"/>
+                                    <outlet property="delegate" destination="trQ-cO-73F" id="QdS-Hg-mx9"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DK-PJ-0Vf">
+                                <rect key="frame" x="16" y="29" width="30" height="63"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="trQ-cO-73F" eventType="touchUpInside" id="DxE-Lc-Qwd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Pgf-41-BwU" firstAttribute="centerX" secondItem="TIh-in-8Xz" secondAttribute="centerX" id="JHE-gA-Oat"/>
+                            <constraint firstItem="TIh-in-8Xz" firstAttribute="top" secondItem="0DK-PJ-0Vf" secondAttribute="bottom" constant="-92" id="NTJ-Ni-8f4"/>
                             <constraint firstAttribute="trailing" secondItem="TIh-in-8Xz" secondAttribute="trailing" id="T9L-Nc-ehY"/>
                             <constraint firstItem="TIh-in-8Xz" firstAttribute="leading" secondItem="JUa-dP-Ma5" secondAttribute="leading" id="hVh-I2-8K9"/>
                             <constraint firstItem="eXH-h3-1bk" firstAttribute="top" secondItem="TIh-in-8Xz" secondAttribute="bottom" id="hxj-eh-L82"/>
                             <constraint firstItem="TIh-in-8Xz" firstAttribute="top" secondItem="Pgf-41-BwU" secondAttribute="bottom" constant="-80" id="ip2-hJ-OZJ"/>
                             <constraint firstItem="TIh-in-8Xz" firstAttribute="top" secondItem="JUa-dP-Ma5" secondAttribute="top" id="not-HK-T5P"/>
+                            <constraint firstItem="TIh-in-8Xz" firstAttribute="leading" secondItem="0DK-PJ-0Vf" secondAttribute="trailing" constant="-46" id="qIG-pX-aJz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="classNameLabel" destination="Pgf-41-BwU" id="zXJ-Xk-gX7"/>
+                        <outlet property="tableView" destination="fkJ-qd-25z" id="L2m-pN-iwG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ku0-eG-dYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1367.2" y="92.203898050974516"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Wox-8s-YHR">
+            <objects>
+                <viewController storyboardIdentifier="msg" id="V7G-JR-Fy8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SC1-gB-Kaz"/>
+                        <viewControllerLayoutGuide type="bottom" id="PCQ-wg-kvb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lge-Sx-tYR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="da2-sK-H8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="92"/>
         </scene>
     </scenes>
     <resources>

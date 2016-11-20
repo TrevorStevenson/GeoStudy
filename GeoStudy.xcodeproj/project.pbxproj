@@ -10,6 +10,7 @@
 		02855B17A052BDAD4B5541B3 /* Pods_GeoStudyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28825B4D4F7F20D961302108 /* Pods_GeoStudyUITests.framework */; };
 		3A1866371DE1938700859F20 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A1866361DE1938700859F20 /* BebasNeue.otf */; };
 		3A1E8BED1DE1D1720054D14F /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E8BEC1DE1D1720054D14F /* ClassViewController.swift */; };
+		3A1E8BEF1DE1D1F80054D14F /* StudyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E8BEE1DE1D1F80054D14F /* StudyCell.swift */; };
 		3AD13F041DE0EE4E001E1404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */; };
 		3AD13F061DE0EE4E001E1404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F051DE0EE4E001E1404 /* ViewController.swift */; };
 		3AD13F091DE0EE4E001E1404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F071DE0EE4E001E1404 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		37B191CAC958FF896CBB2DE2 /* Pods-GeoStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyUITests/Pods-GeoStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3A1866361DE1938700859F20 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		3A1E8BEC1DE1D1720054D14F /* ClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		3A1E8BEE1DE1D1F80054D14F /* StudyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyCell.swift; sourceTree = "<group>"; };
 		3AD13F001DE0EE4E001E1404 /* GeoStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD13F051DE0EE4E001E1404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		3AD13F461DE1526A001E1404 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				3A1E8BEE1DE1D1F80054D14F /* StudyCell.swift */,
 				3A1866361DE1938700859F20 /* BebasNeue.otf */,
 				3AD13F441DE1525F001E1404 /* ClassCell.swift */,
 				3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */,
@@ -497,6 +500,7 @@
 				3AD13F041DE0EE4E001E1404 /* AppDelegate.swift in Sources */,
 				3A1E8BED1DE1D1720054D14F /* ClassViewController.swift in Sources */,
 				3AD13F431DE11090001E1404 /* ScheduleViewController.swift in Sources */,
+				3A1E8BEF1DE1D1F80054D14F /* StudyCell.swift in Sources */,
 				3AD13F451DE1525F001E1404 /* ClassCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

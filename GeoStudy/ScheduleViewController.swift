@@ -64,9 +64,6 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
             self.classes.remove(at: indexPath.row)
             
             self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.none)
-            //let indx = IndexSet(integer: indexPath.section)
-            //self.tableView.deleteSections(indx, with: .none)
-            
         }))
         
         deleteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))

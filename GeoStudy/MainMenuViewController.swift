@@ -27,6 +27,7 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
     var viewC: ViewController!
     var SVC: ScheduleViewController?
     var isFirst = true
+    var displayName = ""
     
     var locationManager = CLLocationManager()
     
@@ -84,71 +85,73 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
                     self.isLoginShowing = false
                     _ = self.viewC.navigationController?.popViewController(animated: true)
                 }
-                else
-                {
-                    self.userIDLabel.text = "Welcome " + (user?.displayName)!
+                
+                self.displayName = user!.displayName!
+                self.userIDLabel.text = "Welcome " + (self.displayName)
+                
+                self.userID = user!.uid
+                self.SVC?.userID = self.userID
+                self.ref = FIRDatabase.database().reference()
+                
+                self.ref!.child("users").child(self.userID).child("classes").observe(.value, with: { (snapshot) in
                     
-                    self.userID = user!.uid
-                    self.SVC?.userID = self.userID
-                    self.ref = FIRDatabase.database().reference()
+                    self.classInfo = []
+                    self.classes = []
                     
-                    self.ref!.child("users").child(self.userID).child("classes").observe(.value, with: { (snapshot) in
-                        
+                    if snapshot.exists()
+                    {
                         self.classInfo = []
                         self.classes = []
-
-                        if snapshot.exists()
+                        
+                        for c in snapshot.children.allObjects as! [FIRDataSnapshot]
                         {
-                            self.classInfo = []
-                            self.classes = []
-                            
-                            for c in snapshot.children.allObjects as! [FIRDataSnapshot]
-                            {
-                                self.classInfo.append(c.key)
-                                self.classes.append(c.value as! String)
-                            }
-                            
-                            self.SVC!.classes = self.classes
-                            self.SVC!.classInfo = self.classInfo
-                            
-                            if let table = self.SVC?.tableView
-                            {
-                                table.reloadData()
-                            }
+                            self.classInfo.append(c.key)
+                            self.classes.append(c.value as! String)
                         }
                         
-                        if self.classes.count == 0
+                        self.SVC!.classes = self.classes
+                        self.SVC!.classInfo = self.classInfo
+                        
+                        if let table = self.SVC?.tableView
                         {
-                            for button in self.buttons
-                            {
-                                button.removeFromSuperview()
-                            }
-                            self.buttons.removeAll()
-                            
-                            self.instructionsLabel.isHidden = false
-
-                            if self.isFirst
-                            {
-                                self.isFirst = false
-                            }
-                            else
-                            {
-                                
-                                self.instructionsLabel.text = "No Classes"
-                            }
+                            table.reloadData()
+                        }
+                    }
+                    
+                    if self.classes.count == 0
+                    {
+                        for button in self.buttons
+                        {
+                            button.removeFromSuperview()
+                        }
+                        self.buttons.removeAll()
+                        
+                        self.instructionsLabel.isHidden = false
+                        
+                        if self.isFirst
+                        {
+                            self.isFirst = false
                         }
                         else
                         {
-                            self.updateButtons()
-                            self.instructionsLabel.isHidden = true
+                            
+                            self.instructionsLabel.text = "No Classes"
                         }
-                    })
-                }
+                    }
+                    else
+                    {
+                        self.updateButtons()
+                        self.instructionsLabel.isHidden = true
+                    }
+                })
+
             }
             else
             {
                 self.viewC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login") as! ViewController
                 self.navigationController?.show(self.viewC, sender: nil)
+                
+                self.isLoginShowing = true
             }
         }
         
@@ -215,8 +218,20 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
 
     }
     
-    func selectSubject()
+    func selectSubject(sender: UIButton)
     {
+        if let name = sender.titleLabel?.text
+        {
+            let key = self.ref!.child(name).childByAutoId().key
+            
+            self.ref?.updateChildValues(["/\(name)/\(key)" : self.displayName])
+            
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "class") as! ClassViewController
+            controller.name = name
+            controller.myKey = key
+            
+            self.navigationController?.show(controller, sender: nil)
+        }
         
     }
 }
