@@ -11,7 +11,11 @@ import Firebase
 
 class ScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var addClassButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    
     var userID = ""
     var ref: FIRDatabaseReference!
     var classInfo: [String] = []
@@ -22,51 +26,16 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let waitAlert = UIAlertController(title: "Please Wait", message: nil, preferredStyle: .alert)
-        present(waitAlert, animated: true, completion: nil)
+        titleLabel.font = UIFont(name: "BebasNeue", size: 30)
+        addClassButton.titleLabel!.font = UIFont(name: "BebasNeue", size: 25)
         
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if user != nil
-            {
-                // User is signed in.
-                self.userID = user!.uid
-                self.ref = FIRDatabase.database().reference()
-                
-                self.ref.child("users").child(self.userID).child("classes").observe(.value, with: { (snapshot) in
-                    
-                    if snapshot.exists()
-                    {
-                        
-                        for c in snapshot.children.allObjects as! [FIRDataSnapshot]
-                        {
-                            
-                            if !self.classes.contains(c.value as! String)
-                            {
-                                self.classInfo.append(c.key)
-                                self.classes.append(c.value as! String)
-                            }
-                        }
-                        
-                    }
+        //let waitAlert = UIAlertController(title: "Please Wait", message: nil, preferredStyle: .alert)
+        //present(waitAlert, animated: true, completion: nil)
+        self.ref = FIRDatabase.database().reference()
 
-                    self.tableView.reloadData()
-                    
-                    waitAlert.removeFromParentViewController()
-                    
-                })
-            }
+        self.tableView.reloadData()
         
-        }
-
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        
-        super.viewDidDisappear(animated)
-        
-        self.ref.child("users").child(self.userID).child("classes").removeAllObservers()
-    }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -89,12 +58,14 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         let deleteAlert = UIAlertController(title: "Delete", message: "Would you like to delete this class?", preferredStyle: .alert)
         
         deleteAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
-            
+            print("delete")
             self.ref.child("users").child(self.userID).child("classes").child(self.classInfo[indexPath.row]).removeValue()
             self.classInfo.remove(at: indexPath.row)
             self.classes.remove(at: indexPath.row)
             
-            self.tableView.reloadData()
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.none)
+            //let indx = IndexSet(integer: indexPath.section)
+            //self.tableView.deleteSections(indx, with: .none)
             
         }))
         
@@ -116,6 +87,8 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
             
             self.ref.updateChildValues(["/users/\(self.userID)/classes/\(key)" : className!])
             
+            self.tableView.reloadData()
+            
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -126,7 +99,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func dismiss(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil)
+        _ = self.navigationController?.popViewController(animated: true)
     }
 
 }

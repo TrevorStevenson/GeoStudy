@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02855B17A052BDAD4B5541B3 /* Pods_GeoStudyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28825B4D4F7F20D961302108 /* Pods_GeoStudyUITests.framework */; };
+		3A1866371DE1938700859F20 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A1866361DE1938700859F20 /* BebasNeue.otf */; };
+		3A1E8BED1DE1D1720054D14F /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E8BEC1DE1D1720054D14F /* ClassViewController.swift */; };
 		3AD13F041DE0EE4E001E1404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */; };
 		3AD13F061DE0EE4E001E1404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F051DE0EE4E001E1404 /* ViewController.swift */; };
 		3AD13F091DE0EE4E001E1404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F071DE0EE4E001E1404 /* Main.storyboard */; };
@@ -22,7 +24,6 @@
 		3AD13F431DE11090001E1404 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F421DE11090001E1404 /* ScheduleViewController.swift */; };
 		3AD13F451DE1525F001E1404 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F441DE1525F001E1404 /* ClassCell.swift */; };
 		3AD59F591DE1757E00D58F18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD59F581DE1757E00D58F18 /* CoreLocation.framework */; };
-		3AD59F5B1DE18C7800D58F18 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AD59F5A1DE18C7800D58F18 /* BebasNeue.otf */; };
 		F0DF41F1082BAA0F7B96A81B /* Pods_GeoStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A05A7F00F14EED2E7AF44F /* Pods_GeoStudy.framework */; };
 		FA8EC9FC9965FB0E337B5E28 /* Pods_GeoStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED5CBA5F618C70BFFFFFE408 /* Pods_GeoStudyTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,8 @@
 		1445C2DA49675F47B1F65575 /* Pods-GeoStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyTests/Pods-GeoStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28825B4D4F7F20D961302108 /* Pods_GeoStudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoStudyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B191CAC958FF896CBB2DE2 /* Pods-GeoStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyUITests/Pods-GeoStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3A1866361DE1938700859F20 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
+		3A1E8BEC1DE1D1720054D14F /* ClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		3AD13F001DE0EE4E001E1404 /* GeoStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD13F051DE0EE4E001E1404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		3AD13F421DE11090001E1404 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		3AD13F441DE1525F001E1404 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		3AD59F581DE1757E00D58F18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3AD59F5A1DE18C7800D58F18 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		6BF2CF87839530D55A51996B /* Pods-GeoStudyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyUITests/Pods-GeoStudyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		70A05A7F00F14EED2E7AF44F /* Pods_GeoStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E673126A0B2F92C91EDDA280 /* Pods-GeoStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyTests/Pods-GeoStudyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				3AD13F051DE0EE4E001E1404 /* ViewController.swift */,
 				3AD13F401DE10AF2001E1404 /* MainMenuViewController.swift */,
 				3AD13F421DE11090001E1404 /* ScheduleViewController.swift */,
+				3A1E8BEC1DE1D1720054D14F /* ClassViewController.swift */,
 				3AD13F071DE0EE4E001E1404 /* Main.storyboard */,
 				3AD13F0A1DE0EE4E001E1404 /* Assets.xcassets */,
 			);
@@ -163,7 +166,7 @@
 		3AD13F461DE1526A001E1404 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				3AD59F5A1DE18C7800D58F18 /* BebasNeue.otf */,
+				3A1866361DE1938700859F20 /* BebasNeue.otf */,
 				3AD13F441DE1525F001E1404 /* ClassCell.swift */,
 				3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */,
 				3AD13F0C1DE0EE4E001E1404 /* LaunchScreen.storyboard */,
@@ -323,7 +326,7 @@
 				3AD13F0E1DE0EE4E001E1404 /* LaunchScreen.storyboard in Resources */,
 				3AD13F321DE0FDE1001E1404 /* GoogleService-Info.plist in Resources */,
 				3AD13F0B1DE0EE4E001E1404 /* Assets.xcassets in Resources */,
-				3AD59F5B1DE18C7800D58F18 /* BebasNeue.otf in Resources */,
+				3A1866371DE1938700859F20 /* BebasNeue.otf in Resources */,
 				3AD13F091DE0EE4E001E1404 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +495,7 @@
 				3AD13F411DE10AF2001E1404 /* MainMenuViewController.swift in Sources */,
 				3AD13F061DE0EE4E001E1404 /* ViewController.swift in Sources */,
 				3AD13F041DE0EE4E001E1404 /* AppDelegate.swift in Sources */,
+				3A1E8BED1DE1D1720054D14F /* ClassViewController.swift in Sources */,
 				3AD13F431DE11090001E1404 /* ScheduleViewController.swift in Sources */,
 				3AD13F451DE1525F001E1404 /* ClassCell.swift in Sources */,
 			);

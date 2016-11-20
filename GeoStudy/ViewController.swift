@@ -11,24 +11,23 @@ import Firebase
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var signOutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController?.isNavigationBarHidden = true
-        
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if user != nil {
-                // User is signed in.
-                self.dismiss(animated: true, completion: nil)
-            } 
-        }
+        self.titleLabel.font = UIFont(name: "BebasNeue", size: 100)
+        self.signOutButton.titleLabel?.font = UIFont(name: "BebasNeue", size: 30)
         
         GIDSignIn.sharedInstance().uiDelegate = self
         
         //GIDSignIn.sharedInstance().signInSilently()
         
         let signInButton = GIDSignInButton()
+        signInButton.style = .wide
         signInButton.frame.origin.x = self.view.frame.width/2 - signInButton.frame.width/2
         signInButton.frame.origin.y = self.view.frame.height/2 - signInButton.frame.height/2
         self.view.addSubview(signInButton)
