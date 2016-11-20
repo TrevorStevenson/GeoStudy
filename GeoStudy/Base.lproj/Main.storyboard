@@ -25,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u38-Wp-YN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="841"/>
+            <point key="canvasLocation" x="742" y="730"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -39,15 +39,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jZO-fJ-ZJ0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="jZO-fJ-ZJ0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZu-7u-Vnk">
+                                <rect key="frame" x="295" y="622" width="67" height="37"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0K-db-4d4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geo Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-7M-v1V">
+                                <rect key="frame" x="55.5" y="55.5" width="265.5" height="79.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="56"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jZO-fJ-ZJ0" secondAttribute="bottom" id="BGZ-by-6sJ"/>
                             <constraint firstItem="jZO-fJ-ZJ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GAh-r5-oiR"/>
+                            <constraint firstItem="PZu-7u-Vnk" firstAttribute="leading" secondItem="jZO-fJ-ZJ0" secondAttribute="trailing" constant="-80" id="OeH-RB-FhB"/>
                             <constraint firstAttribute="trailing" secondItem="jZO-fJ-ZJ0" secondAttribute="trailing" id="Pt5-qj-zl4"/>
+                            <constraint firstItem="PZu-7u-Vnk" firstAttribute="top" secondItem="jZO-fJ-ZJ0" secondAttribute="bottom" constant="-45" id="esT-ml-Ga0"/>
+                            <constraint firstItem="jZO-fJ-ZJ0" firstAttribute="top" secondItem="pDe-7M-v1V" secondAttribute="bottom" constant="-135" id="g8n-YN-GoE"/>
+                            <constraint firstItem="pDe-7M-v1V" firstAttribute="centerX" secondItem="jZO-fJ-ZJ0" secondAttribute="centerX" id="nwk-pE-YLw"/>
                             <constraint firstItem="jZO-fJ-ZJ0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uw6-D4-ord"/>
                         </constraints>
                     </view>
@@ -55,12 +75,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="94"/>
+            <point key="canvasLocation" x="116" y="93.103448275862078"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="R5t-QE-Eyo">
             <objects>
-                <viewController id="EJg-zX-iZH" customClass="ScheduleViewController" customModule="GeoStudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="schedule" id="EJg-zX-iZH" customClass="ScheduleViewController" customModule="GeoStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VgO-TJ-QWk"/>
                         <viewControllerLayoutGuide type="bottom" id="fMY-Fy-at4"/>
@@ -69,15 +89,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="ts0-xN-xQp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-Bc-zDt">
                                 <rect key="frame" x="121" y="40" width="134" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pmW-ga-F0V">
                                 <rect key="frame" x="36" y="81" width="303" height="516"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="76" id="XDL-JS-rON" customClass="ClassCell" customModule="GeoStudy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="303" height="76"/>
@@ -87,7 +110,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgj-qL-sb1">
-                                                    <rect key="frame" x="8" y="28" width="91" height="21"/>
+                                                    <rect key="frame" x="8" y="27" width="91" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -98,6 +121,7 @@
                                                 <constraint firstItem="Jgj-qL-sb1" firstAttribute="centerY" secondItem="ex8-7w-dIL" secondAttribute="centerY" id="c4C-1C-GCC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="classLabel" destination="Jgj-qL-sb1" id="0oN-XI-nOl"/>
                                         </connections>
@@ -110,7 +134,9 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbJ-21-uIL">
                                 <rect key="frame" x="290" y="617" width="69" height="30"/>
-                                <state key="normal" title="Add Class"/>
+                                <state key="normal" title="Add Class">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addClass:" destination="EJg-zX-iZH" eventType="touchUpInside" id="Lwd-w1-PJU"/>
                                 </connections>
@@ -129,6 +155,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ts0-xN-xQp" firstAttribute="leading" secondItem="hua-HN-VL4" secondAttribute="leading" id="8tD-Cd-k4T"/>
+                            <constraint firstItem="ts0-xN-xQp" firstAttribute="top" secondItem="hua-HN-VL4" secondAttribute="top" id="CCx-dg-CMD"/>
                             <constraint firstItem="wF2-Bc-zDt" firstAttribute="centerX" secondItem="hua-HN-VL4" secondAttribute="centerX" id="CJF-br-Igk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pmW-ga-F0V" secondAttribute="trailing" constant="20" id="GoK-li-AKO"/>
                             <constraint firstItem="wF2-Bc-zDt" firstAttribute="top" secondItem="VgO-TJ-QWk" secondAttribute="bottom" constant="20" id="Hvi-lR-H7d"/>
@@ -136,6 +164,8 @@
                             <constraint firstItem="pmW-ga-F0V" firstAttribute="leading" secondItem="hua-HN-VL4" secondAttribute="leadingMargin" constant="20" id="dbW-PC-7uw"/>
                             <constraint firstItem="pmW-ga-F0V" firstAttribute="top" secondItem="wF2-Bc-zDt" secondAttribute="bottom" constant="20" id="fYk-kr-inx"/>
                             <constraint firstItem="fMY-Fy-at4" firstAttribute="top" secondItem="XbJ-21-uIL" secondAttribute="bottom" constant="20" id="oWN-Sg-DFG"/>
+                            <constraint firstItem="fMY-Fy-at4" firstAttribute="top" secondItem="ts0-xN-xQp" secondAttribute="bottom" id="roF-nB-x4T"/>
+                            <constraint firstAttribute="trailing" secondItem="ts0-xN-xQp" secondAttribute="trailing" id="sPI-OC-jlf"/>
                             <constraint firstItem="XbJ-21-uIL" firstAttribute="top" secondItem="pmW-ga-F0V" secondAttribute="bottom" constant="20" id="uF3-LH-buz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XbJ-21-uIL" secondAttribute="trailing" id="vQQ-uH-AK0"/>
                             <constraint firstAttribute="leadingMargin" secondItem="KJ2-86-Rv4" secondAttribute="leading" id="yIz-QT-hxY"/>
@@ -147,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zus-Fx-R9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="-535.68215892053979"/>
+            <point key="canvasLocation" x="742" y="-538"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="S2h-1N-b0N">
@@ -161,35 +191,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="LN6-9j-Gis">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp7-2W-QcF">
                                 <rect key="frame" x="16" y="40" width="60" height="30"/>
-                                <state key="normal" title="Sign Out"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="signOut:" destination="iix-PJ-efL" eventType="touchUpInside" id="nVj-MU-80t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdh-vX-XVW">
-                                <rect key="frame" x="160" y="323" width="55" height="21"/>
+                                <rect key="frame" x="160" y="40" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weQ-Gi-1j5">
-                                <rect key="frame" x="126" y="285" width="123" height="30"/>
-                                <state key="normal" title="Manage Schedule"/>
+                                <rect key="frame" x="126" y="617" width="123" height="30"/>
+                                <state key="normal" title="Manage Schedule">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="EJg-zX-iZH" kind="presentation" id="Jtc-j9-IXh"/>
+                                    <action selector="manageSchedules:" destination="iix-PJ-efL" eventType="touchUpInside" id="VPg-5l-IGg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xdh-vX-XVW" firstAttribute="centerX" secondItem="LN6-9j-Gis" secondAttribute="centerX" id="3Hx-Cg-30w"/>
                             <constraint firstItem="Wp7-2W-QcF" firstAttribute="top" secondItem="f4k-1v-g7p" secondAttribute="bottom" constant="20" id="4eg-VB-SnT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Wp7-2W-QcF" secondAttribute="leading" id="8t6-nl-cbd"/>
+                            <constraint firstItem="CXF-aR-J7z" firstAttribute="top" secondItem="weQ-Gi-1j5" secondAttribute="bottom" constant="20" id="EHn-6T-Nzl"/>
                             <constraint firstItem="weQ-Gi-1j5" firstAttribute="centerX" secondItem="iht-ep-P2K" secondAttribute="centerX" id="G9D-C8-Tkw"/>
-                            <constraint firstItem="Xdh-vX-XVW" firstAttribute="centerY" secondItem="iht-ep-P2K" secondAttribute="centerY" id="Tdw-Gl-nuV"/>
-                            <constraint firstItem="Xdh-vX-XVW" firstAttribute="centerX" secondItem="iht-ep-P2K" secondAttribute="centerX" id="V2W-g0-XbJ"/>
-                            <constraint firstItem="Xdh-vX-XVW" firstAttribute="top" secondItem="weQ-Gi-1j5" secondAttribute="bottom" constant="8" id="xhW-It-CYv"/>
+                            <constraint firstItem="CXF-aR-J7z" firstAttribute="top" secondItem="LN6-9j-Gis" secondAttribute="bottom" id="VtT-bP-gyU"/>
+                            <constraint firstAttribute="trailing" secondItem="LN6-9j-Gis" secondAttribute="trailing" id="czO-am-KZh"/>
+                            <constraint firstItem="Xdh-vX-XVW" firstAttribute="top" secondItem="f4k-1v-g7p" secondAttribute="bottom" constant="20" id="jZL-Nj-Se1"/>
+                            <constraint firstItem="LN6-9j-Gis" firstAttribute="top" secondItem="iht-ep-P2K" secondAttribute="top" id="wCb-nB-Fkt"/>
+                            <constraint firstItem="LN6-9j-Gis" firstAttribute="leading" secondItem="iht-ep-P2K" secondAttribute="leading" id="x4R-3p-ObV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jSB-0V-EIx"/>
@@ -199,11 +240,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOw-sO-2II" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="139"/>
+            <point key="canvasLocation" x="742" y="93"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg" width="1280" height="1280"/>
         <image name="dismiss" width="128" height="128"/>
+        <image name="green" width="1280" height="1280"/>
+        <image name="login" width="1920" height="1280"/>
     </resources>
 </document>

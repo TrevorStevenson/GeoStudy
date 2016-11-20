@@ -35,11 +35,21 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBAction func signOut(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Sign Out", message: "Would you like to completely sign out?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            
+            GIDSignIn.sharedInstance().signOut()
 
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
 
 }
 

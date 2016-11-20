@@ -16,10 +16,14 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     var ref: FIRDatabaseReference!
     var classInfo: [String] = []
     var classes: [String] = []
+    var VC = MainMenuViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        let waitAlert = UIAlertController(title: "Please Wait", message: nil, preferredStyle: .alert)
+        present(waitAlert, animated: true, completion: nil)
         
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if user != nil
@@ -44,14 +48,23 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
                         }
                         
                     }
-                    print("test")
+
                     self.tableView.reloadData()
+                    
+                    waitAlert.removeFromParentViewController()
                     
                 })
             }
         
         }
 
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        super.viewDidDisappear(animated)
+        
+        self.ref.child("users").child(self.userID).child("classes").removeAllObservers()
     }
     
     
