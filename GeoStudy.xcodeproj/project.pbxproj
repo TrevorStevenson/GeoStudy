@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		02855B17A052BDAD4B5541B3 /* Pods_GeoStudyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28825B4D4F7F20D961302108 /* Pods_GeoStudyUITests.framework */; };
+		3A0AF49F1DE3AD0500E54FE6 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0AF49E1DE3AD0500E54FE6 /* UserNotifications.framework */; };
+		3A135A021DE54B63002B6BF4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A135A011DE54B63002B6BF4 /* AdSupport.framework */; };
 		3A1866371DE1938700859F20 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A1866361DE1938700859F20 /* BebasNeue.otf */; };
 		3A1E8BED1DE1D1720054D14F /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E8BEC1DE1D1720054D14F /* ClassViewController.swift */; };
 		3A1E8BEF1DE1D1F80054D14F /* StudyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E8BEE1DE1D1F80054D14F /* StudyCell.swift */; };
+		3AAF8D131DE55EDA006D1EDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AAF8D121DE55EDA006D1EDB /* GoogleService-Info.plist */; };
+		3AAF8D141DE55EDA006D1EDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AAF8D121DE55EDA006D1EDB /* GoogleService-Info.plist */; };
+		3AAF8D151DE55EDA006D1EDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AAF8D121DE55EDA006D1EDB /* GoogleService-Info.plist */; };
+		3AAF8D171DE62941006D1EDB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AAF8D161DE62941006D1EDB /* OpenSans-Regular.ttf */; };
+		3AAF8D191DE62BD4006D1EDB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AAF8D181DE62BD4006D1EDB /* OpenSans-Bold.ttf */; };
+		3AAF8D1B1DE8A48C006D1EDB /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF8D1A1DE8A48C006D1EDB /* ChatViewController.swift */; };
 		3AD13F041DE0EE4E001E1404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */; };
 		3AD13F061DE0EE4E001E1404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F051DE0EE4E001E1404 /* ViewController.swift */; };
 		3AD13F091DE0EE4E001E1404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F071DE0EE4E001E1404 /* Main.storyboard */; };
@@ -18,9 +26,6 @@
 		3AD13F0E1DE0EE4E001E1404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F0C1DE0EE4E001E1404 /* LaunchScreen.storyboard */; };
 		3AD13F191DE0EE4E001E1404 /* GeoStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F181DE0EE4E001E1404 /* GeoStudyTests.swift */; };
 		3AD13F241DE0EE4E001E1404 /* GeoStudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F231DE0EE4E001E1404 /* GeoStudyUITests.swift */; };
-		3AD13F321DE0FDE1001E1404 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F311DE0FDE1001E1404 /* GoogleService-Info.plist */; };
-		3AD13F331DE0FDE1001E1404 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F311DE0FDE1001E1404 /* GoogleService-Info.plist */; };
-		3AD13F341DE0FDE1001E1404 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD13F311DE0FDE1001E1404 /* GoogleService-Info.plist */; };
 		3AD13F411DE10AF2001E1404 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F401DE10AF2001E1404 /* MainMenuViewController.swift */; };
 		3AD13F431DE11090001E1404 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F421DE11090001E1404 /* ScheduleViewController.swift */; };
 		3AD13F451DE1525F001E1404 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD13F441DE1525F001E1404 /* ClassCell.swift */; };
@@ -50,9 +55,16 @@
 		1445C2DA49675F47B1F65575 /* Pods-GeoStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyTests/Pods-GeoStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28825B4D4F7F20D961302108 /* Pods_GeoStudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoStudyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B191CAC958FF896CBB2DE2 /* Pods-GeoStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStudyUITests/Pods-GeoStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3A0AF49E1DE3AD0500E54FE6 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		3A135A011DE54B63002B6BF4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		3A135A031DE54BBF002B6BF4 /* GeoStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoStudy.entitlements; sourceTree = "<group>"; };
 		3A1866361DE1938700859F20 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		3A1E8BEC1DE1D1720054D14F /* ClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		3A1E8BEE1DE1D1F80054D14F /* StudyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyCell.swift; sourceTree = "<group>"; };
+		3AAF8D121DE55EDA006D1EDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AAF8D161DE62941006D1EDB /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		3AAF8D181DE62BD4006D1EDB /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		3AAF8D1A1DE8A48C006D1EDB /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3AD13F001DE0EE4E001E1404 /* GeoStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD13F051DE0EE4E001E1404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +78,6 @@
 		3AD13F1F1DE0EE4E001E1404 /* GeoStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD13F231DE0EE4E001E1404 /* GeoStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoStudyUITests.swift; sourceTree = "<group>"; };
 		3AD13F251DE0EE4E001E1404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AD13F311DE0FDE1001E1404 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AD13F351DE0FF0A001E1404 /* GeoStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoStudy-Bridging-Header.h"; sourceTree = "<group>"; };
 		3AD13F3C1DE105F2001E1404 /* GoogleSignIn */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleSignIn; path = Pods/GoogleSignIn; sourceTree = "<group>"; };
 		3AD13F3E1DE1060B001E1404 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework; sourceTree = "<group>"; };
@@ -87,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A135A021DE54B63002B6BF4 /* AdSupport.framework in Frameworks */,
+				3A0AF49F1DE3AD0500E54FE6 /* UserNotifications.framework in Frameworks */,
 				3AD59F591DE1757E00D58F18 /* CoreLocation.framework in Frameworks */,
 				F0DF41F1082BAA0F7B96A81B /* Pods_GeoStudy.framework in Frameworks */,
 			);
@@ -136,11 +149,13 @@
 		3AD13F021DE0EE4E001E1404 /* GeoStudy */ = {
 			isa = PBXGroup;
 			children = (
+				3A135A031DE54BBF002B6BF4 /* GeoStudy.entitlements */,
 				3AD13F461DE1526A001E1404 /* Misc */,
 				3AD13F051DE0EE4E001E1404 /* ViewController.swift */,
 				3AD13F401DE10AF2001E1404 /* MainMenuViewController.swift */,
 				3AD13F421DE11090001E1404 /* ScheduleViewController.swift */,
 				3A1E8BEC1DE1D1720054D14F /* ClassViewController.swift */,
+				3AAF8D1A1DE8A48C006D1EDB /* ChatViewController.swift */,
 				3AD13F071DE0EE4E001E1404 /* Main.storyboard */,
 				3AD13F0A1DE0EE4E001E1404 /* Assets.xcassets */,
 			);
@@ -168,13 +183,15 @@
 		3AD13F461DE1526A001E1404 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				3A1E8BEE1DE1D1F80054D14F /* StudyCell.swift */,
-				3A1866361DE1938700859F20 /* BebasNeue.otf */,
-				3AD13F441DE1525F001E1404 /* ClassCell.swift */,
+				3AAF8D181DE62BD4006D1EDB /* OpenSans-Bold.ttf */,
+				3AAF8D161DE62941006D1EDB /* OpenSans-Regular.ttf */,
 				3AD13F031DE0EE4E001E1404 /* AppDelegate.swift */,
+				3A1E8BEE1DE1D1F80054D14F /* StudyCell.swift */,
+				3AD13F441DE1525F001E1404 /* ClassCell.swift */,
+				3A1866361DE1938700859F20 /* BebasNeue.otf */,
 				3AD13F0C1DE0EE4E001E1404 /* LaunchScreen.storyboard */,
 				3AD13F0F1DE0EE4E001E1404 /* Info.plist */,
-				3AD13F311DE0FDE1001E1404 /* GoogleService-Info.plist */,
+				3AAF8D121DE55EDA006D1EDB /* GoogleService-Info.plist */,
 				3AD13F351DE0FF0A001E1404 /* GeoStudy-Bridging-Header.h */,
 			);
 			name = Misc;
@@ -183,6 +200,8 @@
 		85D4966EEE573E4F53E72704 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A135A011DE54B63002B6BF4 /* AdSupport.framework */,
+				3A0AF49E1DE3AD0500E54FE6 /* UserNotifications.framework */,
 				3AD59F581DE1757E00D58F18 /* CoreLocation.framework */,
 				3AD13F3E1DE1060B001E1404 /* GoogleSignIn.framework */,
 				3AD13F3C1DE105F2001E1404 /* GoogleSignIn */,
@@ -285,16 +304,26 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = Q443KXN5V7;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					3AD13F131DE0EE4E001E1404 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Q443KXN5V7;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3AD13EFF1DE0EE4E001E1404;
 					};
 					3AD13F1E1DE0EE4E001E1404 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Q443KXN5V7;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3AD13EFF1DE0EE4E001E1404;
@@ -327,9 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD13F0E1DE0EE4E001E1404 /* LaunchScreen.storyboard in Resources */,
-				3AD13F321DE0FDE1001E1404 /* GoogleService-Info.plist in Resources */,
+				3AAF8D191DE62BD4006D1EDB /* OpenSans-Bold.ttf in Resources */,
 				3AD13F0B1DE0EE4E001E1404 /* Assets.xcassets in Resources */,
+				3AAF8D131DE55EDA006D1EDB /* GoogleService-Info.plist in Resources */,
 				3A1866371DE1938700859F20 /* BebasNeue.otf in Resources */,
+				3AAF8D171DE62941006D1EDB /* OpenSans-Regular.ttf in Resources */,
 				3AD13F091DE0EE4E001E1404 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD13F331DE0FDE1001E1404 /* GoogleService-Info.plist in Resources */,
+				3AAF8D141DE55EDA006D1EDB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD13F341DE0FDE1001E1404 /* GoogleService-Info.plist in Resources */,
+				3AAF8D151DE55EDA006D1EDB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +528,7 @@
 			files = (
 				3AD13F411DE10AF2001E1404 /* MainMenuViewController.swift in Sources */,
 				3AD13F061DE0EE4E001E1404 /* ViewController.swift in Sources */,
+				3AAF8D1B1DE8A48C006D1EDB /* ChatViewController.swift in Sources */,
 				3AD13F041DE0EE4E001E1404 /* AppDelegate.swift in Sources */,
 				3A1E8BED1DE1D1720054D14F /* ClassViewController.swift in Sources */,
 				3AD13F431DE11090001E1404 /* ScheduleViewController.swift in Sources */,
@@ -578,9 +610,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Stevenson (7HUS37RF5V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Trevor Stevenson (7HUS37RF5V)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Q443KXN5V7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -600,6 +634,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -629,9 +664,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Stevenson (7HUS37RF5V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Trevor Stevenson (7HUS37RF5V)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Q443KXN5V7;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -644,6 +681,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -657,15 +695,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GeoStudy/GeoStudy.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Stevenson (7HUS37RF5V)";
 				DEVELOPMENT_TEAM = Q443KXN5V7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleSignIn/Frameworks",
 				);
 				INFOPLIST_FILE = GeoStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TStevensonApps.GeoStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
+				PROVISIONING_PROFILE_SPECIFIER = GeoStudy;
 				SWIFT_OBJC_BRIDGING_HEADER = "GeoStudy/GeoStudy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -678,15 +721,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GeoStudy/GeoStudy.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Stevenson (7HUS37RF5V)";
 				DEVELOPMENT_TEAM = Q443KXN5V7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleSignIn/Frameworks",
 				);
 				INFOPLIST_FILE = GeoStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TStevensonApps.GeoStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
+				PROVISIONING_PROFILE_SPECIFIER = GeoStudy;
 				SWIFT_OBJC_BRIDGING_HEADER = "GeoStudy/GeoStudy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -703,6 +751,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TStevensonApps.GeoStudyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
 				SWIFT_OBJC_BRIDGING_HEADER = "GeoStudy/GeoStudyTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -721,6 +770,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TStevensonApps.GeoStudyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
 				SWIFT_OBJC_BRIDGING_HEADER = "GeoStudy/GeoStudyTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoStudy.app/GeoStudy";
@@ -737,6 +787,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TStevensonApps.GeoStudyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
 				SWIFT_OBJC_BRIDGING_HEADER = "GeoStudy/GeoStudyUITests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -754,6 +805,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TStevensonApps.GeoStudyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
 				SWIFT_OBJC_BRIDGING_HEADER = "GeoStudy/GeoStudyUITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = GeoStudy;

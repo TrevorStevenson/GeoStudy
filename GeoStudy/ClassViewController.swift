@@ -27,7 +27,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         // Do any additional setup after loading the view.
         
-        classNameLabel.font = UIFont(name: "BebasNeue", size: 32)
+        classNameLabel.font = UIFont(name: "OpenSans-Regular", size: 32)
         classNameLabel.text = self.name
         
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
@@ -64,6 +64,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //implement messaging
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

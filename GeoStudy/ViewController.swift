@@ -19,8 +19,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController?.isNavigationBarHidden = true
-        self.titleLabel.font = UIFont(name: "BebasNeue", size: 100)
-        self.signOutButton.titleLabel?.font = UIFont(name: "BebasNeue", size: 30)
+        //self.signOutButton.contentHorizontalAlignment = .left
         
         GIDSignIn.sharedInstance().uiDelegate = self
         
@@ -36,7 +35,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBAction func signOut(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Sign Out", message: "Would you like to completely sign out?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Sign Out", message: "Would you like to use a different google account?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
             

@@ -43,16 +43,15 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
             buttons.removeAll()
         }
         
-        let buttonHeight = (self.view.frame.height - 280 - CGFloat(self.classes.count * 15)) / CGFloat(self.classes.count)
+        //let buttonHeight = (self.view.frame.height - 280 - CGFloat(self.classes.count * 15)) / CGFloat(self.classes.count)
         
         for i in 0...self.classes.count - 1
         {
-            let button = UIButton(frame: CGRect(x: 20, y: 180 + (CGFloat(i) * (buttonHeight + 10)), width: self.view.frame.width - 40, height: buttonHeight))
+            let button = UIButton(frame: CGRect(x: 20, y: 180 + (CGFloat(i) * 100), width: self.view.frame.width - 40, height: 90))
             
             button.setTitle(self.classes[i], for: .normal)
-            button.titleLabel?.font = UIFont(name: "BebasNeue", size: 30)
             button.titleLabel?.textColor = UIColor.white
-            button.backgroundColor = UIColor.darkGray
+            button.setBackgroundImage(#imageLiteral(resourceName: "gsb2"), for: .normal)
             button.layer.cornerRadius = 10.0
             button.clipsToBounds = true
             button.addTarget(self, action: #selector(MainMenuViewController.selectSubject), for: .touchUpInside)
@@ -67,12 +66,10 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        signOutButton.titleLabel!.font = UIFont(name: "BebasNeue", size: 25)
-        manageScheduleButton.titleLabel!.font = UIFont(name: "BebasNeue", size: 25)
-        instructionsLabel.font = UIFont(name: "BebasNeue", size: 60)
         instructionsLabel.text = "Please Wait"
         instructionsLabel.isHidden = false
-        userIDLabel.font = UIFont(name: "BebasNeue", size: 30)
+        
+        //self.manageScheduleButton.contentHorizontalAlignment = .left
         
         self.SVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "schedule") as? ScheduleViewController
         
@@ -80,18 +77,20 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
             if user != nil
             {
                 // User is signed in.
-                if self.isLoginShowing
-                {
-                    self.isLoginShowing = false
-                    _ = self.viewC.navigationController?.popViewController(animated: true)
-                }
                 
                 self.displayName = user!.displayName!
-                self.userIDLabel.text = "Welcome " + (self.displayName)
+                self.userIDLabel.text = self.displayName
                 
                 self.userID = user!.uid
                 self.SVC?.userID = self.userID
                 self.ref = FIRDatabase.database().reference()
+                
+                if self.isLoginShowing
+                {
+                    self.isLoginShowing = false
+                    _ = self.viewC.navigationController?.popViewController(animated: true)
+                    self.ref!.child("users").child(self.userID).child("username").setValue(self.displayName)
+                }
                 
                 self.ref!.child("users").child(self.userID).child("classes").observe(.value, with: { (snapshot) in
                     
@@ -225,9 +224,9 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
             let key = self.ref!.child(name).childByAutoId().key
             
             self.ref?.updateChildValues(["/\(name)/\(key)" : self.displayName])
-            
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "class") as! ClassViewController
-            controller.name = name
+                        
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "chat") as! ChatViewController
+            controller.className = name
             controller.myKey = key
             
             self.navigationController?.show(controller, sender: nil)

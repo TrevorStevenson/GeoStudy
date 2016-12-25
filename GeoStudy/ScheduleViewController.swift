@@ -15,7 +15,6 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    
     var userID = ""
     var ref: FIRDatabaseReference!
     var classInfo: [String] = []
@@ -25,16 +24,13 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        titleLabel.font = UIFont(name: "BebasNeue", size: 30)
-        addClassButton.titleLabel!.font = UIFont(name: "BebasNeue", size: 25)
-        
+        // Do any additional setup after loading the view.        
         //let waitAlert = UIAlertController(title: "Please Wait", message: nil, preferredStyle: .alert)
         //present(waitAlert, animated: true, completion: nil)
         self.ref = FIRDatabase.database().reference()
 
         self.tableView.reloadData()
-        
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,7 +54,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         let deleteAlert = UIAlertController(title: "Delete", message: "Would you like to delete this class?", preferredStyle: .alert)
         
         deleteAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
-            print("delete")
+            
             self.ref.child("users").child(self.userID).child("classes").child(self.classInfo[indexPath.row]).removeValue()
             self.classInfo.remove(at: indexPath.row)
             self.classes.remove(at: indexPath.row)
