@@ -304,7 +304,7 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = Q443KXN5V7;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -697,6 +697,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GeoStudy/GeoStudy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Stevenson (7HUS37RF5V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q443KXN5V7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -707,8 +708,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TStevensonApps.GeoStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
-				PROVISIONING_PROFILE_SPECIFIER = GeoStudy;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GeoStudy/GeoStudy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -723,6 +724,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GeoStudy/GeoStudy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Stevenson (7HUS37RF5V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q443KXN5V7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -733,8 +735,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TStevensonApps.GeoStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3b9ed69d-605d-4fc4-b39a-c45b63e7842d";
-				PROVISIONING_PROFILE_SPECIFIER = GeoStudy;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GeoStudy/GeoStudy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

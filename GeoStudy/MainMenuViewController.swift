@@ -17,7 +17,6 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var manageScheduleButton: UIButton!
     
-    
     var userID = ""
     var ref: FIRDatabaseReference?
     var classInfo: [String] = []
@@ -42,12 +41,10 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
             
             buttons.removeAll()
         }
-        
-        //let buttonHeight = (self.view.frame.height - 280 - CGFloat(self.classes.count * 15)) / CGFloat(self.classes.count)
-        
+                
         for i in 0...self.classes.count - 1
         {
-            let button = UIButton(frame: CGRect(x: 20, y: 180 + (CGFloat(i) * 100), width: self.view.frame.width - 40, height: 90))
+            let button = UIButton(frame: CGRect(x: 20, y: 180 + (CGFloat(i) * 90), width: self.view.frame.width - 40, height: 80))
             
             button.setTitle(self.classes[i], for: .normal)
             button.titleLabel?.textColor = UIColor.white

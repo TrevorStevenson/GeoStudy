@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QcV-u7-eNm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QcV-u7-eNm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,13 +51,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-7M-v1V">
-                                <rect key="frame" x="120" y="79" width="136" height="96"/>
+                                <rect key="frame" x="120.5" y="79.5" width="135.5" height="95.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="70"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8D-FN-Qk9">
-                                <rect key="frame" x="88" y="145" width="200" height="96"/>
+                                <rect key="frame" x="88.5" y="145" width="199.5" height="95.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="70"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -126,7 +126,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-Bc-zDt">
-                                <rect key="frame" x="110" y="40" width="156" height="25"/>
+                                <rect key="frame" x="110.5" y="40" width="155.5" height="25"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -143,7 +143,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgj-qL-sb1">
-                                                    <rect key="frame" x="28" y="26" width="93" height="24"/>
+                                                    <rect key="frame" x="28" y="26.5" width="93" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -178,10 +178,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbJ-21-uIL">
-                                <rect key="frame" x="108" y="588" width="160" height="59"/>
+                                <rect key="frame" x="103" y="588" width="170" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="L7O-ZN-4se"/>
-                                    <constraint firstAttribute="width" constant="160" id="Ywd-e2-DUu"/>
+                                    <constraint firstAttribute="width" constant="170" id="Ywd-e2-DUu"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="addbutton">
                                     <attributedString key="attributedTitle">
@@ -243,20 +243,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdh-vX-XVW">
-                                <rect key="frame" x="279" y="28" width="60" height="24"/>
+                                <rect key="frame" x="279.5" y="28" width="59.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVH-SR-gGr">
-                                <rect key="frame" x="136" y="322" width="103" height="24"/>
+                                <rect key="frame" x="136" y="322.5" width="103" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to study?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnv-1g-ywO">
-                                <rect key="frame" x="35" y="81" width="306" height="30"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
+                                <rect key="frame" x="22.5" y="80.5" width="330.5" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -275,17 +275,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weQ-Gi-1j5">
-                                <rect key="frame" x="108" y="607" width="160" height="45"/>
+                                <rect key="frame" x="98" y="602" width="180" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="VzR-4W-uqe"/>
-                                    <constraint firstAttribute="width" constant="160" id="bLp-ei-ODA"/>
+                                    <constraint firstAttribute="height" constant="50" id="VzR-4W-uqe"/>
+                                    <constraint firstAttribute="width" constant="180" id="bLp-ei-ODA"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="tan">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Schedule">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="14" name="OpenSans-Bold"/>
+                                                <font key="NSFont" size="16" name="OpenSans-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -342,7 +342,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-41-BwU">
-                                <rect key="frame" x="161" y="52" width="54" height="28"/>
+                                <rect key="frame" x="161" y="52.5" width="54" height="27.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -359,7 +359,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtz-Kl-DMX">
-                                                    <rect key="frame" x="28" y="16" width="48" height="24"/>
+                                                    <rect key="frame" x="28" y="16.5" width="48" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -438,19 +438,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAa-i9-GYB">
+                                <rect key="frame" x="16" y="40" width="120" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="LrF-lU-jjO"/>
+                                    <constraint firstAttribute="height" constant="39" id="Prg-cO-Jk8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                <state key="normal" title="Back" backgroundImage="back_button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="V7G-JR-Fy8" eventType="touchUpInside" id="b17-e7-bKf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PCQ-wg-kvb" firstAttribute="top" secondItem="6G8-NX-SNE" secondAttribute="bottom" id="14k-hg-D4B"/>
                             <constraint firstItem="PCQ-wg-kvb" firstAttribute="top" secondItem="6G8-NX-SNE" secondAttribute="bottom" id="27r-8i-oy9"/>
                             <constraint firstAttribute="trailing" secondItem="6G8-NX-SNE" secondAttribute="trailing" id="2Gg-g3-OaZ"/>
                             <constraint firstItem="6G8-NX-SNE" firstAttribute="leading" secondItem="lge-Sx-tYR" secondAttribute="leading" id="72t-7N-yvN"/>
-                            <constraint firstAttribute="trailing" secondItem="6G8-NX-SNE" secondAttribute="trailing" id="JVa-0M-8KT"/>
+                            <constraint firstItem="uAa-i9-GYB" firstAttribute="leading" secondItem="lge-Sx-tYR" secondAttribute="leadingMargin" id="CAW-Al-msA"/>
                             <constraint firstItem="xwu-d4-cha" firstAttribute="leading" secondItem="lge-Sx-tYR" secondAttribute="leading" constant="16" id="Jmi-Qm-4xp"/>
                             <constraint firstItem="PCQ-wg-kvb" firstAttribute="top" secondItem="xwu-d4-cha" secondAttribute="bottom" constant="8" id="KxA-Vj-DLz"/>
-                            <constraint firstItem="6G8-NX-SNE" firstAttribute="top" secondItem="lge-Sx-tYR" secondAttribute="top" id="l4y-Tn-PYu"/>
+                            <constraint firstItem="uAa-i9-GYB" firstAttribute="top" secondItem="SC1-gB-Kaz" secondAttribute="bottom" constant="20" id="kAC-x7-kp5"/>
                             <constraint firstItem="6G8-NX-SNE" firstAttribute="top" secondItem="lge-Sx-tYR" secondAttribute="top" id="mnn-DO-phs"/>
-                            <constraint firstItem="6G8-NX-SNE" firstAttribute="leading" secondItem="lge-Sx-tYR" secondAttribute="leading" id="rwG-re-Lg1"/>
                             <constraint firstItem="xwu-d4-cha" firstAttribute="trailing" secondItem="lge-Sx-tYR" secondAttribute="trailingMargin" id="til-Uy-8Sp"/>
                         </constraints>
                     </view>
@@ -465,6 +477,7 @@
     </scenes>
     <resources>
         <image name="addbutton" width="316" height="106"/>
+        <image name="back_button" width="275" height="78"/>
         <image name="bg" width="1280" height="1280"/>
         <image name="black" width="1280" height="1280"/>
         <image name="green" width="1280" height="1280"/>
