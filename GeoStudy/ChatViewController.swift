@@ -27,10 +27,14 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UIScrollViewDel
     
     @IBOutlet weak var textField: UITextField!
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nameLabel.text = self.className
+        
         self.scrollField = UIScrollView(frame: CGRect(x: 0, y: 75, width: self.view.frame.width, height: self.view.frame.height - 113))
         self.scrollField.delegate = self
         self.scrollField.isScrollEnabled = true
@@ -116,7 +120,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UIScrollViewDel
         textLabel.textColor = UIColor.black
         textLabel.numberOfLines = 0
         textLabel.lineBreakMode = .byWordWrapping
-        textLabel.frame.size.width = self.view.frame.width - 40
+        textLabel.frame.size.width = self.view.frame.width - 60
         textLabel.sizeToFit()
 
         let messageView = UIView(frame: CGRect(x: 20, y: currentY, width: Int(self.view.frame.width - 40), height: Int(messageLabel.frame.height + textLabel.frame.height + 20)))

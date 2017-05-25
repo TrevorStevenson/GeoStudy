@@ -10,12 +10,14 @@ import UIKit
 import Firebase
 import CoreLocation
 
-class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
+class MainMenuViewController: UIViewController, UIScrollViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var userIDLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var manageScheduleButton: UIButton!
+    @IBOutlet weak var whatLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     var userID = ""
     var ref: FIRDatabaseReference?
@@ -28,7 +30,9 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
     var isFirst = true
     var displayName = ""
     
-    var locationManager = CLLocationManager()
+    var scrollView = UIScrollView()
+    
+    let manager = CLLocationManager()
     
     func updateButtons()
     {
@@ -41,10 +45,12 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
             
             buttons.removeAll()
         }
-                
+        
+        self.scrollView.contentSize = CGSize(width: self.view.frame.width-40, height: CGFloat(self.classes.count)*90)
+        
         for i in 0...self.classes.count - 1
         {
-            let button = UIButton(frame: CGRect(x: 20, y: 180 + (CGFloat(i) * 90), width: self.view.frame.width - 40, height: 80))
+            let button = UIButton(frame: CGRect(x: 0, y: (CGFloat(i) * 90), width: self.view.frame.width - 40, height: 80))
             
             button.setTitle(self.classes[i], for: .normal)
             button.titleLabel?.textColor = UIColor.white
@@ -53,7 +59,7 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
             button.clipsToBounds = true
             button.addTarget(self, action: #selector(MainMenuViewController.selectSubject), for: .touchUpInside)
             
-            self.view.addSubview(button)
+            self.scrollView.addSubview(button)
             
             buttons.append(button)
         }
@@ -63,8 +69,21 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyKilometer
+        if CLLocationManager.authorizationStatus() == .notDetermined
+        {
+            manager.requestWhenInUseAuthorization()
+        }
+        
         instructionsLabel.text = "Please Wait"
         instructionsLabel.isHidden = false
+        
+        self.scrollView = UIScrollView(frame: CGRect(x: 20, y: whatLabel.frame.origin.y + whatLabel.frame.height + 20, width: self.view.frame.width-40, height: self.view.frame.height-245))
+        self.scrollView.delegate = self
+        self.scrollView.isScrollEnabled = true
+        self.scrollView.contentSize = self.scrollView.frame.size
+        self.view.addSubview(self.scrollView)
         
         //self.manageScheduleButton.contentHorizontalAlignment = .left
         
@@ -151,53 +170,29 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
         
-        locationManager.delegate = self
-        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
         
-        // 1. status is not determined
-        if CLLocationManager.authorizationStatus() == .notDetermined {
-            locationManager.requestAlwaysAuthorization()
-        }
-            
-            // 2. authorization were denied
-        else if CLLocationManager.authorizationStatus() == .denied {
-            let refreshAlert = UIAlertController(title: "Refresh", message: "All data will be lost.", preferredStyle: UIAlertControllerStyle.alert)
-            
-            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-                print("Handle Ok logic here")
-            }))
-            
-            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-                print("Handle Cancel Logic here")
-            }))
-            
-            present(refreshAlert, animated: true, completion: nil)
-        }
-            // 3. we do have authorization
-        else if CLLocationManager.authorizationStatus() == .authorizedAlways {
-            locationManager.startUpdatingLocation()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        if status == .authorizedWhenInUse
+        {
         }
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
+        
+        if visit.departureDate == NSDate.distantFuture
+        {
+            
+        }
     }
-    */
     @IBAction func signOut(_ sender: Any) {
         
         isLoginShowing = true
@@ -219,9 +214,7 @@ class MainMenuViewController: UIViewController, CLLocationManagerDelegate {
         if let name = sender.titleLabel?.text
         {
             let key = self.ref!.child(name).childByAutoId().key
-            
-            self.ref?.updateChildValues(["/\(name)/\(key)" : self.displayName])
-                        
+                                    
             let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "chat") as! ChatViewController
             controller.className = name
             controller.myKey = key

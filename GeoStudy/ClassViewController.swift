@@ -20,6 +20,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     var userID = ""
     var name = ""
     var myKey = ""
+    var displayName = ""
 
     
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
             {
                 self.ref = FIRDatabase.database().reference()
                 self.userID = user!.uid
+                self.displayName = user!.displayName!
                 
                 self.ref!.child(self.name).observe(.value, with: { (snapshot) in
                         
@@ -53,18 +55,18 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        self.ref?.updateChildValues(["/\(self.name)/\(self.myKey)" : self.displayName])
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         
         super.viewWillDisappear(animated)
         self.ref?.child(self.name).child(self.myKey).removeValue()
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //implement messaging
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
