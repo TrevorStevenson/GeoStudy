@@ -24,43 +24,38 @@ class MainMenuViewController: UIViewController, UIScrollViewDelegate, CLLocation
     var classInfo: [String] = []
     var classes: [String] = []
     var buttons: [UIButton] = []
-    var isLoginShowing: Bool = false
-    var viewC: ViewController!
-    var SVC: ScheduleViewController?
+    var isLoginShowing = false
+    weak var viewC: ViewController!
+    weak var SVC: ScheduleViewController?
     var isFirst = true
     var displayName = ""
     
-    var scrollView = UIScrollView()
-    
+    lazy var scrollView = UIScrollView()
     let manager = CLLocationManager()
-    
+
     func updateButtons()
     {
         if buttons.count > 0
         {
-            for t in 0...buttons.count - 1
-            {
-                buttons[t].removeFromSuperview()
-            }
-            
+            for button in buttons { button.removeFromSuperview() }
             buttons.removeAll()
         }
         
-        self.scrollView.contentSize = CGSize(width: self.view.frame.width-40, height: CGFloat(self.classes.count)*90)
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: CGFloat(self.classes.count) * 90)
         
-        for i in 0...self.classes.count - 1
+        for (i, myClass) in classes.enumerated()
         {
             let button = UIButton(frame: CGRect(x: 0, y: (CGFloat(i) * 90), width: self.view.frame.width - 40, height: 80))
             
-            button.setTitle(self.classes[i], for: .normal)
-            button.titleLabel?.textColor = UIColor.white
+            button.setTitle(myClass, for: .normal)
+            
+            if let titleLabel = button.titleLabel { titleLabel.textColor = .white }
             button.setBackgroundImage(#imageLiteral(resourceName: "gsb2"), for: .normal)
             button.layer.cornerRadius = 10.0
             button.clipsToBounds = true
             button.addTarget(self, action: #selector(MainMenuViewController.selectSubject), for: .touchUpInside)
             
-            self.scrollView.addSubview(button)
-            
+            scrollView.addSubview(button)
             buttons.append(button)
         }
     }
@@ -70,41 +65,41 @@ class MainMenuViewController: UIViewController, UIScrollViewDelegate, CLLocation
         
         // Do any additional setup after loading the view.
         manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyKilometer
-        if CLLocationManager.authorizationStatus() == .notDetermined
-        {
-            manager.requestWhenInUseAuthorization()
-        }
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.distanceFilter = kCLDistanceFilterNone
+        
+        manager.requestAlwaysAuthorization()
         
         instructionsLabel.text = "Please Wait"
         instructionsLabel.isHidden = false
         
-        self.scrollView = UIScrollView(frame: CGRect(x: 20, y: whatLabel.frame.origin.y + whatLabel.frame.height + 20, width: self.view.frame.width-40, height: self.view.frame.height-245))
-        self.scrollView.delegate = self
-        self.scrollView.isScrollEnabled = true
-        self.scrollView.contentSize = self.scrollView.frame.size
-        self.view.addSubview(self.scrollView)
+        scrollView = UIScrollView(frame: CGRect(x: 20, y: whatLabel.frame.origin.y + whatLabel.frame.height + 20, width: self.view.frame.width-40, height: self.view.frame.height-245))
+        scrollView.delegate = self
+        scrollView.isScrollEnabled = true
+        scrollView.contentSize = self.scrollView.frame.size
+        view.addSubview(self.scrollView)
         
-        //self.manageScheduleButton.contentHorizontalAlignment = .left
+        SVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "schedule") as? ScheduleViewController
         
-        self.SVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "schedule") as? ScheduleViewController
+        guard let auth = FIRAuth.auth() else { return }
         
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if user != nil
+        auth.addStateDidChangeListener { auth, optionalUser in
+            
+            if let user = optionalUser
             {
                 // User is signed in.
                 
-                self.displayName = user!.displayName!
+                if let name = user.displayName { self.displayName = name }
                 self.userIDLabel.text = self.displayName
                 
-                self.userID = user!.uid
+                self.userID = user.uid
                 self.SVC?.userID = self.userID
                 self.ref = FIRDatabase.database().reference()
                 
                 if self.isLoginShowing
                 {
                     self.isLoginShowing = false
-                    _ = self.viewC.navigationController?.popViewController(animated: true)
+                    self.viewC.navigationController?.popViewController(animated: true)
                     self.ref!.child("users").child(self.userID).child("username").setValue(self.displayName)
                 }
                 
@@ -127,10 +122,7 @@ class MainMenuViewController: UIViewController, UIScrollViewDelegate, CLLocation
                         self.SVC!.classes = self.classes
                         self.SVC!.classInfo = self.classInfo
                         
-                        if let table = self.SVC?.tableView
-                        {
-                            table.reloadData()
-                        }
+                        if let table = self.SVC?.tableView { table.reloadData() }
                     }
                     
                     if self.classes.count == 0
@@ -178,33 +170,20 @@ class MainMenuViewController: UIViewController, UIScrollViewDelegate, CLLocation
         
     }
 
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
-        if status == .authorizedWhenInUse
-        {
-        }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
+    {
         
     }
-    
-    func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
-        
-        if visit.departureDate == NSDate.distantFuture
-        {
-            
-        }
-    }
+
     @IBAction func signOut(_ sender: Any) {
         
         isLoginShowing = true
-        
         try! FIRAuth.auth()!.signOut()
-
     }
     
     @IBAction func manageSchedules(_ sender: Any) {
         
         self.SVC!.VC = self
-        
         self.navigationController?.show(self.SVC!, sender: nil)
 
     }
